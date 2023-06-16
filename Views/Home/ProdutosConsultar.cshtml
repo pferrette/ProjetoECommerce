@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "Consultar Produtos";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+        
+    <form action="buscarProduto" method="post">
+        <input type="text" class="barraBusca" id="barraBuscaProduto" name="barraBuscaProduto" placeholder="Digite um nome ou id">
+        <input type="submit" class="botaoBuscar" id="botaoBuscarProduto" value="Buscar">
+    </form>
+
+    <table>
+        <tr>
+            <th>ID:</th>
+            <th>Nome:</th>
+            <th>Valor:</th>
+            <th>Quantidade:</th>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">1</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">Camiseta Branca Básica Masculina</a></td>
+            <td>R$49,99</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">2</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">Camiseta Preta Básica Masculina</a></td>
+            <td><span class="exValor">R$49,99</span><span>R$39,99</span></td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+    <div class= "d-flex flex-row justify-content-center align-items-center" id="flexPaginasProdutos">
+        <button class="botaoPretoPequeno">꡶ᐸ</button>
+        <button class="botaoPretoPequeno">ᐸ</button>
+        <input type="number" class="numeroPaginas" id="numeroPaginaProdutos" value="1">
+        <button class="botaoPretoPequeno">ᐳ</button>
+        <button class="botaoPretoPequeno">ᐳ꡶</button>
+    </div>
+
+</div>

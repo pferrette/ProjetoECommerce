@@ -1,0 +1,126 @@
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+        
+    <form action="buscarPedidos" method="post">
+        <input type="text" class="barraBusca" id="barraBuscaPedido" name="barraBuscaPedido" placeholder="Digite um e-mail, cpf ou id">
+        <input type="submit" class="botaoBuscar" id="botaoBuscarPedido" value="Buscar">
+    </form>
+
+    <table>
+        <tr>
+            <th>ID:</th>
+            <th>E-mail:</th>
+            <th>CPF:</th>
+            <th>Produtos:</th>
+            <th>Valor:</th>
+            <th>Data:</th>
+            <th>Detalhes:</th>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">1</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">fernanda.mirella.pires@gmail.com.br</a></td>
+            <td>314.277.118-28</td>
+            <td>Camiseta Branca Básica Feminina</td>
+            <td>R$49,99</td>
+            <td>13/06/2023</td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">☰</a></th>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">2</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">luiz_ramos@hotmail.com</a></td>
+            <td>465.397.718-60</td>
+            <td>Camiseta Branca Preta Masculina</td>
+            <td>R$39,99</td>
+            <td>13/06/2023</td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">☰</a></th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <th>☰</th>
+        </tr>
+    </table>
+
+    <div class= "d-flex flex-row justify-content-center align-items-center" id="flexPaginasPedidos">
+        <button class="botaoPretoPequeno">꡶ᐸ</button>
+        <button class="botaoPretoPequeno">ᐸ</button>
+        <input type="number" class="numeroPaginas" id="numeroPaginaClientes" value="1">
+        <button class="botaoPretoPequeno">ᐳ</button>
+        <button class="botaoPretoPequeno">ᐳ꡶</button>
+    </div>
+
+</div>

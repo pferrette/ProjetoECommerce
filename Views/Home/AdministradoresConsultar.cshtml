@@ -1,0 +1,106 @@
+@{
+    ViewData["Title"] = "Administradores";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+
+    <form action="buscarAdministrador" method="post">
+        <input type="text" class="barraBusca" id="barraBuscaAdministrador" name="barraBuscaAdministrador" placeholder="Digite um nome, cpf, e-mail ou id">
+        <input type="submit" class="botaoBuscar" id="botaoBuscarAdministrador" value="Buscar">
+    </form>
+
+    <button id="botaoCadastrarNovoAdm">Cadastrar novo administrador</button>
+
+    <table>
+        <tr>
+            <th>ID:</th>
+            <th>Nome:</th>
+            <th>CPF:</th>
+            <th>E-mail:</th>
+            <th>Nível de acesso:</th>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="ContaAdmin">1</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="ContaAdmin">Guilherme Massao Yoshicava</a></td>
+            <td>495.314.888-60</td>
+            <td>guilherme.yoshicava@gmail.com</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <div class= "d-flex flex-row justify-content-center align-items-center" id="flexPaginasAdmin">
+        <button class="botaoPretoPequeno">꡶ᐸ</button>
+        <button class="botaoPretoPequeno">ᐸ</button>
+        <input type="number" class="numeroPaginas" id="numeroPaginaAdministradores" value="1">
+        <button class="botaoPretoPequeno">ᐳ</button>
+        <button class="botaoPretoPequeno">ᐳ꡶</button>
+    </div>
+
+</div>

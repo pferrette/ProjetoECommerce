@@ -1,0 +1,98 @@
+@{
+    ViewData["Title"] = "Relatório Anual";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+
+    <div>
+        <table>
+            <tr>
+                <th>Quantidade de vendas:</th>
+                <th>Valor vendido:</th>
+            </tr>
+            <tr>
+                <td>360</td>
+                <td>R$22.742,40</td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        let data = google.visualization.arrayToDataTable([
+
+            ['Task', 'Quantidade de vendas'],
+            ['Camiseta', 190],
+            ['Calça', 170],
+
+            ]);
+
+            let options = {
+            title: 'Vendas por categoria'
+            };
+
+            let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
+
+    <div id="piechart" style="width: 40%; height: 400px; padding-left: 50px; padding-top: 50px;"></div>
+
+    <script type="text/javascript">
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawTopX);
+
+        function drawTopX() {
+
+            let data = new google.visualization.DataTable();
+            data.addColumn('string', 'Mês do ano');
+            data.addColumn('number', 'Vendas');
+
+            data.addRows([
+
+                [{v: "Janeiro", f: 'Janeiro'}, 40],
+                [{v: "Fevereiro", f: 'Fevereiro'}, 20],
+                [{v: "Março", f: 'Março'}, 30],
+                [{v: "Abril", f: 'Abril'}, 30],
+                [{v: "Maio", f: 'Maio'}, 30],
+                [{v: "Junho", f: 'Junho'}, 30],
+                [{v: "Julho", f: 'Julho'}, 30],
+                [{v: "Agosto", f: 'Agosto'}, 30],
+                [{v: "Setembro", f: 'Setembro'}, 30],
+                [{v: "Outubro", f: 'Outubro'}, 30],
+                [{v: "Novembro", f: 'Novembro'}, 30],
+                [{v: "Dezembro", f: 'Dezembro'}, 30],
+
+            ]);
+
+            let options = {
+                chart: {
+                title: 'Vendas por mês',
+                }
+            };
+
+            let materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+            materialChart.draw(data, options);
+                
+        }
+
+    </script>
+
+        <div id="chart_div" style="width: 40%;"></div>
+
+    </div>
+
+</div>

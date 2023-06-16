@@ -1,0 +1,107 @@
+@{
+    ViewData["Title"] = "Relatório Diário";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+
+    <div>
+        <table>
+            <tr>
+                <th>Quantidade de vendas:</th>
+                <th>Valor vendido:</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>R$149,97</td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            let data = google.visualization.arrayToDataTable([
+
+            ['Task', 'Quantidade de vendas'],
+            ['Camiseta', 2],
+            ['Calça', 1],
+
+            ]);
+
+            let options = {
+            title: 'Vendas por categoria'
+            };
+
+            let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
+
+    <div id="piechart" style="width: 40%; height: 400px; padding-left: 50px; padding-top: 50px;"></div>
+
+    <script type="text/javascript">
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawTopX);
+
+        function drawTopX() {
+            let data = new google.visualization.DataTable();
+            data.addColumn('string', 'Hora do dia');
+            data.addColumn('number', 'Vendas');
+
+            data.addRows([
+
+                [{v: "0", f: '00:00'}, 0],
+                [{v: "1", f: '01:00'}, 0],
+                [{v: "2", f: '02:00'}, 0],
+                [{v: "3", f: '03:00'}, 1],
+                [{v: "4", f: '04:00'}, 0],
+                [{v: "5", f: '05:00'}, 0],
+                [{v: "6", f: '06:00'}, 0],
+                [{v: "7", f: '07:00'}, 0],
+                [{v: "8", f: '08:00'}, 0],
+                [{v: "9", f: '09:00'}, 0],
+                [{v: "10", f:'10:00'}, 0],
+                [{v: "11", f: '11:00'}, 0],
+                [{v: "12", f: '12:00'}, 0],
+                [{v: "13", f: '13:00'}, 2],
+                [{v: "14", f: '14:00'}, 0],
+                [{v: "15", f: '15:00'}, 0],
+                [{v: "16", f: '16:00'}, 0],
+                [{v: "17", f: '17:00'}, 0],
+                [{v: "18", f: '18:00'}, 0],
+                [{v: "19", f: '19:00'}, 0],
+                [{v: "20", f: '20:00'}, 0],
+                [{v: "21", f: '21:00'}, 0],
+                [{v: "22", f: '22:00'}, 0],
+                [{v: "23", f: '23:00'}, 0],
+
+            ]);
+
+            let options = {
+                chart: {
+                title: 'Vendas por hora',
+                }
+            };
+
+            let materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+            materialChart.draw(data, options);
+                
+        }
+
+    </script>
+
+    <div id="chart_div" style="width: 40%;"></div>
+
+</div>

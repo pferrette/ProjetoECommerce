@@ -1,0 +1,298 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  min-height: 100%;
+  margin: 0;
+}
+
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  min-height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+table {
+  text-align: center;
+}
+
+ul, li{
+  border-radius: 10px;
+}
+
+#formContaAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+  border-top: 1px solid #e5e5e5;;
+  border-bottom: 1px solid #e5e5e5;;
+}
+
+.inputDiscreto{
+  background-color: rgb(238, 238, 238);
+  border-width: 0px;
+  border-radius: 20px;
+}
+
+input{
+  text-align: center;
+  border-radius: 20px;
+}
+
+select{
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 26px;
+  text-align: center;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+}
+
+textarea {
+  padding: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+th, td{
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+}
+
+#itensMenuLateral{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#itensMenuLateral li{
+  width: 100%;
+}
+
+.flexInnerList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  animation-delay: 10ms;
+}
+
+.flexInnerList li{
+  padding-top: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.flexInnerList li:hover{
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.itensPaiMenuLateral{
+  width: 100%;
+  border-radius: 20px;
+  border-width: 0px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  
+}
+
+.itensPaiMenuLateral:hover{
+  opacity: 70%;
+}
+
+#MenuLateral{
+  display: flex;
+  border-right: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 10px;
+}
+
+#containerFlexAdmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+}
+
+#containerFlexContaAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+}
+
+#containerFlexConteudoAdmin
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+}
+
+#botaoSair{
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+}
+
+.barraBusca{
+  height: 40px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 20px;
+  border-width: 0px;
+  width: 400px;
+}
+
+.botaoBuscar{
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+}
+
+#nomeProdutoCadastrar{
+  width: 300px;
+}
+
+.botaoPreto{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+}
+
+.botaoPretoPequeno{
+  width: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border-width: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#botaoCadastrarNovoAdm{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+  width: 300px;
+  height: 40px;
+}
+
+#botaoCadastrarNovoAdm:hover{
+  opacity: 70%;
+}
+
+.numeroPaginas{
+  width: 60px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-width: 0px;
+  background-color: rgb(238, 238, 238)
+}
+
+.botaoBuscar:hover{
+  opacity: 70%;
+}
+
+#botaoSair:hover{
+  opacity: 70%;
+}
+
+#conteudoAba{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#navSuperior{
+  height: 8vh;
+}
+
+#SalvarAtualizacaoCadastro{
+  width: 200px;
+  height: 40px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+  margin-top: 10px;
+}
+
+#SalvarAtualizacaoCadastro:hover{
+  opacity: 70%;
+}
+
+.botaoFilhoMenuAdmin{
+  text-decoration: none;
+  color: black;
+}
+
+.botaoFilhoMenuAdmin:hover{
+  color: black;
+}
+
+.textoItensPaiMenuAdmin{
+  color: white;
+  text-decoration: none;
+}
+
+.textoItensPaiMenuAdmin:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.exValor{
+  text-decoration: line-through;
+  color: red;
+}
+
+.botaoPretoPequeno:hover{
+  opacity: 70%;
+}

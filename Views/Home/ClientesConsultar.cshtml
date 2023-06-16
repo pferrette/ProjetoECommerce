@@ -1,0 +1,92 @@
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+        
+    <form action="buscarCliente" method="post">
+        <input type="text" class="barraBusca" id="barraBuscaCliente" name="barraBuscaCliente" placeholder="Digite um nome, cpf, e-mail ou id">
+        <input type="submit" class="botaoBuscar" id="botaoBuscarCliente" value="Buscar">
+    </form>
+    <table>
+        <tr>
+            <th>ID:</th>
+            <th>Nome:</th>
+            <th>CPF:</th>
+            <th>E-mail:</th>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">1</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">Fernanda Mirella Bianca Pires</a></td>
+            <td>314.277.118-28</td>
+            <td>fernanda.mirella.pires@gmail.com.br</td>
+        </tr>
+        <tr>
+            <td><a asp-area="" asp-controller="Home" asp-action="">2</a></td>
+            <td><a asp-area="" asp-controller="Home" asp-action="">Luiz Vitor Ramos</a></td>
+            <td>465.397.718-60</td>
+            <td>luiz_ramos@hotmail.com</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </table>
+
+    <div class= "d-flex flex-row justify-content-center align-items-center" id="flexPaginasClientes">
+        <button class="botaoPretoPequeno">꡶ᐸ</button>
+        <button class="botaoPretoPequeno">ᐸ</button>
+        <input type="number" class="numeroPaginas" id="numeroPaginaClientes" value="1">
+        <button class="botaoPretoPequeno">ᐳ</button>
+        <button class="botaoPretoPequeno">ᐳ꡶</button>
+    </div>
+
+</div>

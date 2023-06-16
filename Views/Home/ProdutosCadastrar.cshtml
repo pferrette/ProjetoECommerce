@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Cadastrar Produtos";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+        
+    <form id="formContaAdmin" action="atualizarCadastro" method="post">
+
+        <table>
+            <tr>
+                <th>ID:</th>
+                <th>Nome do produto:</th>
+                <th>Categoria:</th>
+                <th>Valor base:</th>
+                <th>Quantidade</th>
+            </tr>
+            <tr>
+                <td id="idProdutoCadastro">-</td>
+                <td><input type="text" class="inputDiscreto" id="nomeProdutoCadastrar" name="nomeProdutoCadastrar" placeholder="Ex: Camiseta Branca Básica Masculina"></td>
+                <td>
+                    <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro">
+                        <option value = "aPreencher" selected>-</option>
+                        <option value = "camiseta">Camiseta</option>
+                        <option value = "calca">Calça</option>
+                    </select>
+                    <button class="botaoPretoPequeno">+</button>
+                </td>
+                <td><input type="number" class="inputDiscreto" id="valorBaseCadastro" name="valorBaseCadastro" placeholder="Ex: 49,99"></td>
+                <td><input type="number" class="inputDiscreto" id="QuantidadeCadastro" name="QuantidadeCadastro" placeholder="Ex: 20"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Promoção?</th>
+                <th>Por porcentagem:</th>
+                <th>Por valor:</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="inputDiscreto" id="checkPromocao" name="checkPromocao"></td>
+                <td><input type="number" class="inputDiscreto" id="descontoPorcentagemCadastro" name="descontoPorcentagemCadastro" placeholder="Ex: 25 (25%)"></td>
+                <td><input type="number" class="inputDiscreto" id="descontoValorCadastro" name="descontoValorCadastro" placeholder="Ex: 10,00 (R$10,00)"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Valor final:</th>
+            </tr>
+            <tr>
+                <td id="valorFinalCadastro">-</td>
+            </tr>
+        </table>
+
+        <label for="descricaoCadastro">Descrição:</label>
+        <textarea class="inputDiscreto" id="descricaoCadastro" name="descricaoCadastro" placeholder="Defina a descrição do produto aqui" rows="4" cols="80"></textarea>
+
+        <input type="submit" id="SalvarAtualizacaoCadastro" value="Salvar alterações">
+
+    </form>
+
+    <button id="botaoSair">Cancelar</button>
+
+</div>
+

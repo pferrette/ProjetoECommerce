@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Relatório Global";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<div id="containerFlexConteudoAdmin">
+    <div>
+        <table>
+            <tr>
+                <th>Quantidade de vendas:</th>
+                <th>Valor vendido:</th>
+            </tr>
+            <tr>
+                <td>720</td>
+                <td>R$45.084,80</td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            let data = google.visualization.arrayToDataTable([
+
+            ['Task', 'Quantidade de vendas'],
+            ['Camiseta', 220],
+            ['Calça', 500],
+
+            ]);
+
+            let options = {
+            title: 'Vendas por categoria'
+            };
+
+            let chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    
+    </script>
+
+    <div id="piechart" style="width: 40%; height: 400px; padding-left: 50px; padding-top: 50px;"></div>
+
+    <script type="text/javascript">
+
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawTopX);
+
+        function drawTopX() {
+            let data = new google.visualization.DataTable();
+            data.addColumn('string', 'Ano');
+            data.addColumn('number', 'Vendas');
+
+            data.addRows([
+
+                [{v: "2019", f: '2019'}, 0],
+                [{v: "2020", f: '2020'}, 0],
+                [{v: "2021", f: '2021'}, 0],
+                [{v: "2022", f: '2022'}, 360],
+                [{v: "2023", f: '2023'}, 360],
+
+            ]);
+
+            let options = {
+                chart: {
+                title: 'Vendas por ano',
+                }
+            };
+
+            let materialChart = new google.charts.Bar(document.getElementById('chart_div'));
+            materialChart.draw(data, options);
+                
+        }
+
+    </script>
+
+    <div id="chart_div"></div>
+
+</div>

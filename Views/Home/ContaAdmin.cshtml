@@ -1,0 +1,67 @@
+@{
+    ViewData["Title"] = "Conta Admin";
+}
+
+@{
+    Layout = "_Layout2";
+}
+
+<div id="containerFlexContaAdmin">
+
+    <form id="formContaAdmin" action="atualizarCadastro" method="post">
+
+        <h1>Dados da conta</h1>
+        <table>
+            <tr>
+                <th id="dataCriacao">Criada em:</th>
+                <th id="responsavelCriacao">Criada por:</th>
+                <th id="nivelAcesso">Nível de acesso:</th>
+            </tr>
+            <tr>
+                <td>09/06/2023</td>
+                <td>Guilherme Massao Yoshicava</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <h1>Dados do usuário</h1>
+
+        <table>
+            <tr>
+                <th><label for="nomeCompleto">Nome completo:</label></th>
+                <th><label for="email">E-mail:</label></th>
+                <th id="labelCpf">CPF:</th>
+                <th id="labelDataNascimento">Data de nascimento:</th>
+                <th><label for="telefone">Telefone:</label></th>
+            </tr>
+            <tr>
+                <td><input type="text" class="inputDiscreto" id="nomeCompleto" name="nomeCompleto" value="Guilherme Massao Yoshicava"></td>
+                <td><input type="email" class="inputDiscreto" id="email" name="email" value="guilherme.yoshicava@gmail.com"></td>
+                <td id="cpf">495.314.888-60</td>
+                <td id="dataNascimento">17/06/1999</td>
+                <td><input type="number" class="inputDiscreto" id="telefone" name="telefone" value="11949494388"></td>
+            </tr>
+        </table>
+
+        <h1>Endereço</h1>
+
+        <table>
+            <tr>
+                <th><label for="logradouro">Logradouro:</label></th>
+                <th><label for=numeroResidencia>Número:</label></th>
+                <th><label for=cep> CEP:</label></th>
+            </tr>
+            <tr>
+                <td><input type="text" class="inputDiscreto" id="logradouro" name="logradouro" value="Rua Florânia"></td>
+                <td><input type="number" class="inputDiscreto" id="numeroResidencia" name="numeroResidencia" value="235"></td>
+                <td><input type="number" class="inputDiscreto" id="cep" name="cep" value="04281080"></td>
+            </tr>
+        </table>
+
+        <input type="submit" id="SalvarAtualizacaoCadastro" value="Salvar alterações">
+
+    </form>
+
+    <button id="botaoSair">Sair</button>
+
+</div>
