@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Projetos\\ProjetoEcommerce\\ProjetoEcommerce.csproj": {}
+    "C:\\Projetos\\ProjetoECommerce\\ProjetoEcommerce.csproj": {}
   },
   "projects": {
-    "A:\\Projetos\\ProjetoEcommerce\\ProjetoEcommerce.csproj": {
+    "C:\\Projetos\\ProjetoECommerce\\ProjetoEcommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Projetos\\ProjetoEcommerce\\ProjetoEcommerce.csproj",
+        "projectUniqueName": "C:\\Projetos\\ProjetoECommerce\\ProjetoEcommerce.csproj",
         "projectName": "ProjetoEcommerce",
-        "projectPath": "A:\\Projetos\\ProjetoEcommerce\\ProjetoEcommerce.csproj",
-        "packagesPath": "C:\\Users\\Guilherme Massao\\.nuget\\packages\\",
-        "outputPath": "A:\\Projetos\\ProjetoEcommerce\\obj\\",
+        "projectPath": "C:\\Projetos\\ProjetoECommerce\\ProjetoEcommerce.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Projetos\\ProjetoECommerce\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Guilherme Massao\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -38,6 +45,24 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
