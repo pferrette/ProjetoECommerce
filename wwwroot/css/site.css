@@ -1,18 +1,16 @@
-html {
-  font-size: 14px;
-}
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
+/* 1 - Global - Tags*/
+
 html {
   min-height: 100%;
   margin: 0;
+  font-size: 14px;
 }
-
 
 body {
   height: 100%;
@@ -33,27 +31,11 @@ ul, li{
   border-radius: 10px;
 }
 
-#formContaAdmin{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 80%;
-  width: 95%;
-  border-top: 1px solid #e5e5e5;;
-  border-bottom: 1px solid #e5e5e5;;
-}
-
-.inputDiscreto{
-  background-color: rgb(238, 238, 238);
-  border-width: 0px;
-  border-radius: 20px;
-}
-
 input{
   text-align: center;
-  border-radius: 20px;
 }
+
+/*As propriedades "appearance" se referem à seta no canto direito, que indica que há uma lista de opções*/
 
 select{
   padding-left: 10px;
@@ -61,7 +43,7 @@ select{
   height: 26px;
   text-align: center;
   -moz-appearance:none; /* Firefox */
-  -webkit-appearance:none; /* Safari and Chrome */
+  -webkit-appearance:none; /* Safari e Chrome */
   appearance:none;
 }
 
@@ -69,10 +51,13 @@ textarea {
   padding: 10px;
 }
 
+/*As propriedades "appearance" se referem às setas no canto direito do input de tipo number, onde o usuário pode clicar no botão para aumentar ou diminuir o número*/
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari e Chrome */
+  appearance:none;
 }
 
 th, td{
@@ -80,81 +65,9 @@ th, td{
   border: 1px solid #e5e5e5;
 }
 
-#itensMenuLateral{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+/*2 - Global - Outros*/
 
-#itensMenuLateral li{
-  width: 100%;
-}
-
-.flexInnerList{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  animation-delay: 10ms;
-}
-
-.flexInnerList li{
-  padding-top: 5px;
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.flexInnerList li:hover{
-  opacity: 70%;
-  cursor: pointer;
-}
-
-.itensPaiMenuLateral{
-  width: 100%;
-  border-radius: 20px;
-  border-width: 0px;
-  background-color: rgb(19, 19, 19);
-  color: white;
-  
-}
-
-.itensPaiMenuLateral:hover{
-  opacity: 70%;
-}
-
-#MenuLateral{
-  display: flex;
-  border-right: 1px solid #e5e5e5;
-  margin: 0;
-  padding: 10px;
-}
-
-#containerFlexAdmin{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
-  height: 92vh;
-  width: 100%;
-  margin: 0;
-}
-
-#containerFlexContaAdmin{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 92vh;
-  width: 100%;
-  margin: 0;
-}
+/*"#containerFlexConteudoAdmin" refere-se ao container com o conteúdo da respectiva aba, que fica ao lado de menu lateral*/
 
 #containerFlexConteudoAdmin
 {
@@ -167,13 +80,12 @@ th, td{
   margin: 0;
 }
 
-#botaoSair{
-  width: 200px;
-  height: 40px;
-  background-color: red;
-  color: white;
-  border-radius: 20px;
+/*A classe ".inputDiscreto" também se aplica a outros tipos de tag, como <textarea>, <select> etc.*/
+
+.inputDiscreto{
+  background-color: rgb(238, 238, 238);
   border-width: 0px;
+  border-radius: 20px;
 }
 
 .barraBusca{
@@ -193,8 +105,8 @@ th, td{
   border-width: 0px;
 }
 
-#nomeProdutoCadastrar{
-  width: 300px;
+.botaoBuscar:hover{
+  opacity: 70%;
 }
 
 .botaoPreto{
@@ -202,6 +114,10 @@ th, td{
   color: white;
   border-radius: 20px;
   border-width: 0px;
+}
+
+.botaoPreto:hover{
+  opacity: 70%;
 }
 
 .botaoPretoPequeno{
@@ -214,16 +130,7 @@ th, td{
   margin-right: 2px;
 }
 
-#botaoCadastrarNovoAdm{
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  border-width: 0px;
-  width: 300px;
-  height: 40px;
-}
-
-#botaoCadastrarNovoAdm:hover{
+.botaoPretoPequeno:hover{
   opacity: 70%;
 }
 
@@ -235,24 +142,118 @@ th, td{
   background-color: rgb(238, 238, 238)
 }
 
-.botaoBuscar:hover{
-  opacity: 70%;
-}
-
-#botaoSair:hover{
-  opacity: 70%;
-}
-
-#conteudoAba{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+/*3 - Menu Lateral e Cabeçalho*/
 
 #navSuperior{
   height: 8vh;
+}
+
+#containerFlexAdmin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+}
+
+/*"#MenuLateral" refere-se à tag <nav> que fica dentro da <div> "containerFlexAdmin"*/
+
+#MenuLateral{
+  display: flex;
+  border-right: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 10px;
+}
+
+/*"#itensMenuLateral" refere-se à tag <ul> que envelopa os botões pai e as inner lists (as <ul>s de dentro)*/
+
+#itensMenuLateral{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#itensMenuLateral li{
+  width: 100%;
+}
+
+/*".itensPaiMenuLateral" refere-se aos botões pai (que não os botões das inner lists)*/
+
+.itensPaiMenuLateral{
+  width: 100%;
+  border-radius: 20px;
+  border-width: 0px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+}
+
+.itensPaiMenuLateral:hover{
+  opacity: 70%;
+}
+
+/*".flexInnerList" refere-se às inner lists, que são listas dentro de listas. No caso, a lista pai é a "itensMenuLateral"*/
+
+.flexInnerList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.botaoFilhoMenuAdmin{
+  text-decoration: none;
+  color: black;
+  padding-top: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.botaoFilhoMenuAdmin:hover{
+  color: black;
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.textoItensPaiMenuAdmin{
+  color: white;
+  text-decoration: none;
+}
+
+.textoItensPaiMenuAdmin:hover{
+  color: white;
+  text-decoration: none;
+}
+
+/*4 - ContaAdmin*/
+
+#containerFlexContaAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 92vh;
+  width: 100%;
+  margin: 0;
+}
+
+#formContaAdmin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+  border-top: 1px solid #e5e5e5;;
+  border-bottom: 1px solid #e5e5e5;;
 }
 
 #SalvarAtualizacaoCadastro{
@@ -269,30 +270,43 @@ th, td{
   opacity: 70%;
 }
 
-.botaoFilhoMenuAdmin{
-  text-decoration: none;
-  color: black;
-}
-
-.botaoFilhoMenuAdmin:hover{
-  color: black;
-}
-
-.textoItensPaiMenuAdmin{
+#botaoSair{
+  width: 200px;
+  height: 40px;
+  background-color: red;
   color: white;
-  text-decoration: none;
+  border-radius: 20px;
+  border-width: 0px;
 }
 
-.textoItensPaiMenuAdmin:hover{
-  color: white;
-  text-decoration: none;
+#botaoSair:hover{
+  opacity: 70%;
 }
+
+/*5 - Produtos Consultar*/
 
 .exValor{
   text-decoration: line-through;
   color: red;
 }
 
-.botaoPretoPequeno:hover{
+/* 6 - Produtos Cadastrar*/
+
+#nomeProdutoCadastrar{
+  width: 300px;
+}
+
+/*7 - Administradores Consultar*/
+
+#botaoCadastrarNovoAdm{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+  width: 300px;
+  height: 40px;
+}
+
+#botaoCadastrarNovoAdm:hover{
   opacity: 70%;
 }
