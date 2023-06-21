@@ -9,14 +9,15 @@
 <div id="containerFlexConteudoAdmin">
 
     <label for="opcoesCategoriaCadastro">Categoria:</label>
-    <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
-        <option value="vestuario" onclick="atualizarCamposAtributosProduto">Vestuário</option>
-        <option value="consumivel" onclick="atualizarCamposAtributosProduto">Consumível</option>
-    </select>
+    <div class="d-flex .flex-row flex-justify-center flex-items-center">
+        <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
+            <option value="vestuario" onclick="atualizarCamposAtributosProduto">Vestuário</option>
+            <option value="consumivel" onclick="atualizarCamposAtributosProduto">Consumível</option>
+        </select>
+        <button class="botaoPretoPequeno">+</button>
+    </div>
         
     <form id="formProdutosCadastrar" action="atualizarCadastro" method="post">
-
-        <button class="botaoPretoPequeno">+</button>
 
         <table>
             <tr>
