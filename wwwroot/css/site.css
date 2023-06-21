@@ -256,6 +256,17 @@ th, td{
   border-bottom: 1px solid #e5e5e5;;
 }
 
+#formProdutosCadastrar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  width: 95%;
+  border-top: 1px solid #e5e5e5;;
+  border-bottom: 1px solid #e5e5e5;;
+}
+
 #SalvarAtualizacaoCadastro{
   width: 200px;
   height: 40px;

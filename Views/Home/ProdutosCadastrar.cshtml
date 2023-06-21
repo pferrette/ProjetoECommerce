@@ -7,14 +7,22 @@
 }
 
 <div id="containerFlexConteudoAdmin">
+
+    <label for="opcoesCategoriaCadastro">Categoria:</label>
+    <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
+        <option value="vestuario" onclick="atualizarCamposAtributosProduto">Vestuário</option>
+        <option value="consumivel" onclick="atualizarCamposAtributosProduto">Consumível</option>
+    </select>
         
-    <form id="formContaAdmin" action="atualizarCadastro" method="post">
+    <form id="formProdutosCadastrar" action="atualizarCadastro" method="post">
+
+        <button class="botaoPretoPequeno">+</button>
 
         <table>
             <tr>
                 <th>ID:</th>
                 <th><label for="nomeProdutoCadastrar">Nome do produto:</label></th>
-                <th><label for="opcoesCategoriaCadastro">Categoria:</th>
+                <th><label for="opcoesSubcategoriaCadastro">Subcategoria:</label></th>
                 <th><label for="valorBaseCadastro">Valor base:</label></th>
                 <th><label for="QuantidadeCadastro">Quantidade</label></th>
             </tr>
@@ -22,8 +30,7 @@
                 <td id="idProdutoCadastro">-</td>
                 <td><input type="text" class="inputDiscreto" id="nomeProdutoCadastrar" name="nomeProdutoCadastrar" placeholder="Ex: Camiseta Branca Básica Masculina"></td>
                 <td>
-                    <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro">
-                        <option value = "aPreencher" selected>-</option>
+                    <select class="inputDiscreto" id="opcoesSubcategoriaCadastro" name="opcoesSubcategoriaCadastro" required>
                         <option value = "camiseta">Camiseta</option>
                         <option value = "calca">Calça</option>
                     </select>

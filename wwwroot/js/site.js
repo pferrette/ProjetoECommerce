@@ -41,3 +41,12 @@ function esconderflexInnerListRelatorios(){
         elemento2.textContent = "Relatórios ᐅ";
     }
 }
+
+function atualizarCamposAtributosProduto(){
+    let elemento = document.getElementById("opcoesCategoriaCadastro");
+    if (elemento.value == "vestuario"){
+        elemento.style.color="red";
+    }else if(elemento.value == "consumivel"){
+        elemento.style.color="blue";
+    }
+}
