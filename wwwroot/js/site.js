@@ -42,5 +42,10 @@ function esconderflexInnerListRelatorios(){
     }
 }
 
-function atualizarCamposAtributosProduto(){
+function atualizarCamposVestuario(){
+
+}
+
+function atualizarCamposConsumivel(){
+
 }
