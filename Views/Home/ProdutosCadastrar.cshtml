@@ -6,112 +6,116 @@
     Layout = "_Layout";
 }
 
-<div id="containerFlexConteudoAdmin">
+<div class="divTable">
 
-    <label id="labelCategoria" for="opcoesCategoriaCadastro">Categoria:</label>
+    <div id="containerFlexConteudoAdmin">
 
-    <div id="containerCategoriaCadastrar" class="d-flex .flex-row flex-justify-center flex-items-center">
-        <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
-            <option value="vestuario" onclick="atualizarCamposVestuario">Vestuário</option>
-            <option value="consumivel" onclick="atualizarCamposConsumivel">Consumível</option>
-        </select>
-        <button type="button" class="botaoPretoPequeno">+</button>
+        <label id="labelCategoria" for="opcoesCategoriaCadastro">Categoria:</label>
+
+        <div id="containerCategoriaCadastrar" class="d-flex .flex-row flex-justify-center flex-items-center">
+            <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
+                <option value="vestuario" onclick="atualizarCamposVestuario">Vestuário</option>
+                <option value="consumivel" onclick="atualizarCamposConsumivel">Consumível</option>
+            </select>
+            <button type="button" class="botaoPretoPequeno">+</button>
+        </div>
+            
+        <form id="formProdutosCadastrar" action="atualizarCadastro" method="post">
+
+            <table>
+                <tr>
+                    <th>ID:</th>
+                    <th><label for="nomeProdutoCadastrar">Nome do produto:</label></th>
+                    <th><label for="opcoesSubcategoriaCadastro">Subcategoria:</label></th>
+                    <th><label for="valorProducaoCadastro">Valor de compra/produção:</label></th>
+                    <th><label for="valorBaseCadastro">Valor de venda base:</label></th>
+                    <th><label for="QuantidadeCadastro">Quantidade</label></th>
+                    <th><label for="sobDemandaCadastro">Sob demanda?</label></th>
+                </tr>
+                <tr>
+                    <td id="idProdutoCadastro">-</td>
+                    <td><input type="text" class="inputDiscreto" id="nomeProdutoCadastrar" name="nomeProdutoCadastrar" placeholder="Ex: Camiseta Branca Básica Masculina"></td>
+                    <td>
+                        <select class="inputDiscreto" id="opcoesSubcategoriaCadastro" name="opcoesSubcategoriaCadastro" required>
+                            <option value = "camiseta">Camiseta</option>
+                            <option value = "calca">Calça</option>
+                        </select>
+                        <button type="button" class="botaoPretoPequeno">+</button>
+                    </td>
+                    <td><input type="number" class="inputDiscreto" id="valorProducaoCadastro" name="valorProducaoCadastro" placeholder="Ex: 10,00"></td>
+                    <td><input type="number" class="inputDiscreto" id="valorBaseCadastro" name="valorBaseCadastro" placeholder="Ex: 49,99"></td>
+                    <td><input type="number" class="inputDiscreto" id="QuantidadeCadastro" name="QuantidadeCadastro" placeholder="Ex: 20"></td>
+                    <td><input type="checkbox" class="inputDiscreto" id="checkSobDemanda" name="checkSobDemanda"></td>
+                </tr>
+            </table>
+
+            <div id="containerOpcoesCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
+                <button type="button" id="botaoAdicionarOpcaoCadastro" class="botaoPreto">Adicionar opção (tamanho, cor etc.)</button>
+            </div>
+
+            <table id="tableCadastrarFornecedor">
+                <tr>
+                    <th>Fornecedor:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select class="inputDiscreto" id="opcoesFornecedorCadastro" name="opcoesFornecedorCadastro" required>
+                            <option value = "roger">Roger</option>
+                            <option value = "armando">Armando</option>
+                        </select>
+                        <button type="button" class="botaoPretoPequeno">+</button>
+                    </td>
+                </tr>
+            </table>
+
+            <table id="tableCadastrarValidade">
+                <tr>
+                    <th><label for="validadeCadastro">Validade (mais próxima):</label></th>
+                </tr>
+                <tr>
+                    <td><input type="date" class="inputDiscreto" id="validadeCadastro" name="validadeCadastro" placeholder="Ex: 22/06/2023"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th><label for="checkPromocao">Promoção?</label></th>
+                    <th><label for="descontoPorcentagemCadastro">Por porcentagem:</label></th>
+                    <th><label for="descontoValorCadastro">Por valor:</label></th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="inputDiscreto" id="checkPromocao" name="checkPromocao"></td>
+                    <td><input type="number" class="inputDiscreto" id="descontoPorcentagemCadastro" name="descontoPorcentagemCadastro" placeholder="Ex: 25 (25%)"></td>
+                    <td><input type="number" class="inputDiscreto" id="descontoValorCadastro" name="descontoValorCadastro" placeholder="Ex: 10,00 (R$10,00)"></td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th>Valor de venda final:</th>
+                    <th>Lucro:</th>
+                </tr>
+                <tr>
+                    <td id="valorFinalCadastro">-</td>
+                    <td id="lucroCadastro">-</td>
+                </tr>
+            </table>
+
+            <label for="descricaoCadastro">Descrição:</label>
+            <textarea class="inputDiscreto" id="descricaoCadastro" name="descricaoCadastro" placeholder="Defina a descrição do produto aqui" rows="4" cols="80"></textarea>
+
+            <div id="containerImagensCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
+                <label>Imagem do produto:</label>
+                <input type="file" id="imagensCadastro" name="imagensCadastro">
+            </div>
+
+            <input type="submit" id="SalvarAtualizacaoCadastro" value="Salvar alterações">
+
+        </form>
+
+        <button id="botaoSair">Cancelar</button>
+
     </div>
-        
-    <form id="formProdutosCadastrar" action="atualizarCadastro" method="post">
-
-        <table>
-            <tr>
-                <th>ID:</th>
-                <th><label for="nomeProdutoCadastrar">Nome do produto:</label></th>
-                <th><label for="opcoesSubcategoriaCadastro">Subcategoria:</label></th>
-                <th><label for="valorProducaoCadastro">Valor de compra/produção:</label></th>
-                <th><label for="valorBaseCadastro">Valor de venda base:</label></th>
-                <th><label for="QuantidadeCadastro">Quantidade</label></th>
-                <th><label for="sobDemandaCadastro">Sob demanda?</label></th>
-            </tr>
-            <tr>
-                <td id="idProdutoCadastro">-</td>
-                <td><input type="text" class="inputDiscreto" id="nomeProdutoCadastrar" name="nomeProdutoCadastrar" placeholder="Ex: Camiseta Branca Básica Masculina"></td>
-                <td>
-                    <select class="inputDiscreto" id="opcoesSubcategoriaCadastro" name="opcoesSubcategoriaCadastro" required>
-                        <option value = "camiseta">Camiseta</option>
-                        <option value = "calca">Calça</option>
-                    </select>
-                    <button type="button" class="botaoPretoPequeno">+</button>
-                </td>
-                <td><input type="number" class="inputDiscreto" id="valorProducaoCadastro" name="valorProducaoCadastro" placeholder="Ex: 10,00"></td>
-                <td><input type="number" class="inputDiscreto" id="valorBaseCadastro" name="valorBaseCadastro" placeholder="Ex: 49,99"></td>
-                <td><input type="number" class="inputDiscreto" id="QuantidadeCadastro" name="QuantidadeCadastro" placeholder="Ex: 20"></td>
-                <td><input type="checkbox" class="inputDiscreto" id="checkSobDemanda" name="checkSobDemanda"></td>
-            </tr>
-        </table>
-
-        <div id="containerOpcoesCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
-            <button type="button" id="botaoAdicionarOpcaoCadastro" class="botaoPreto">Adicionar opção (tamanho, cor etc.)</button>
-        </div>
-
-        <table id="tableCadastrarFornecedor">
-            <tr>
-                <th>Fornecedor:</th>
-            </tr>
-            <tr>
-                <td>
-                    <select class="inputDiscreto" id="opcoesFornecedorCadastro" name="opcoesFornecedorCadastro" required>
-                        <option value = "roger">Roger</option>
-                        <option value = "armando">Armando</option>
-                    </select>
-                    <button type="button" class="botaoPretoPequeno">+</button>
-                </td>
-            </tr>
-        </table>
-
-        <table id="tableCadastrarValidade">
-            <tr>
-                <th><label for="validadeCadastro">Validade (mais próxima):</label></th>
-            </tr>
-            <tr>
-                <td><input type="date" class="inputDiscreto" id="validadeCadastro" name="validadeCadastro" placeholder="Ex: 22/06/2023"></td>
-            </tr>
-        </table>
-
-        <table>
-            <tr>
-                <th><label for="checkPromocao">Promoção?</label></th>
-                <th><label for="descontoPorcentagemCadastro">Por porcentagem:</label></th>
-                <th><label for="descontoValorCadastro">Por valor:</label></th>
-            </tr>
-            <tr>
-                <td><input type="checkbox" class="inputDiscreto" id="checkPromocao" name="checkPromocao"></td>
-                <td><input type="number" class="inputDiscreto" id="descontoPorcentagemCadastro" name="descontoPorcentagemCadastro" placeholder="Ex: 25 (25%)"></td>
-                <td><input type="number" class="inputDiscreto" id="descontoValorCadastro" name="descontoValorCadastro" placeholder="Ex: 10,00 (R$10,00)"></td>
-            </tr>
-        </table>
-
-        <table>
-            <tr>
-                <th>Valor de venda final:</th>
-                <th>Lucro:</th>
-            </tr>
-            <tr>
-                <td id="valorFinalCadastro">-</td>
-                <td id="lucroCadastro">-</td>
-            </tr>
-        </table>
-
-        <label for="descricaoCadastro">Descrição:</label>
-        <textarea class="inputDiscreto" id="descricaoCadastro" name="descricaoCadastro" placeholder="Defina a descrição do produto aqui" rows="4" cols="80"></textarea>
-
-        <div id="containerImagensCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
-            <label>Imagem do produto:</label>
-            <input type="file" id="imagensCadastro" name="imagensCadastro">
-        </div>
-
-        <input type="submit" id="SalvarAtualizacaoCadastro" value="Salvar alterações">
-
-    </form>
-
-    <button id="botaoSair">Cancelar</button>
 
 </div>
 

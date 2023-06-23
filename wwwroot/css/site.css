@@ -7,7 +7,7 @@
 /* 1 - Global - Tags*/
 
 html {
-  min-height: 100%;
+  height: 100%;
   margin: 0;
   font-size: 14px;
 }
@@ -18,14 +18,16 @@ body {
 }
 
 main {
-  min-height: 100%;
-  margin: 0;
+  height: 100%;
   width: 100%;
+  overflow: auto;
+  margin: 0;
 }
 
 table {
   text-align: center;
   margin: 10px;
+  max-width: 100%;
 }
 
 ul, li{
@@ -49,6 +51,7 @@ select{
 
 textarea {
   padding: 10px;
+  max-width: 100%;
 }
 
 /*As propriedades "appearance" se referem às setas no canto direito do input de tipo number, onde o usuário pode clicar no botão para aumentar ou diminuir o número*/
@@ -146,6 +149,11 @@ label{
   background-color: rgb(238, 238, 238)
 }
 
+.divTable{
+  display: table;
+  width: 100%;
+}
+
 /*3 - Menu Lateral e Cabeçalho*/
 
 #navSuperior{
@@ -158,7 +166,7 @@ label{
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  min-height: 92vh;
+  height: 92vh;
   width: 100%;
   margin: 0;
 }
@@ -260,17 +268,6 @@ label{
   border-bottom: 1px solid #e5e5e5;;
 }
 
-#formProdutosCadastrar{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 80%;
-  width: 95%;
-  border-top: 1px solid #e5e5e5;;
-  border-bottom: 1px solid #e5e5e5;;
-}
-
 #SalvarAtualizacaoCadastro{
   width: 200px;
   height: 40px;
@@ -312,6 +309,16 @@ label{
   margin: 10px;
 }
 
+#formProdutosCadastrar{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+  border-top: 1px solid #e5e5e5;;
+  border-bottom: 1px solid #e5e5e5;;
+}
+
 #nomeProdutoCadastrar{
   width: 300px;
 }
@@ -321,7 +328,7 @@ label{
 }
 
 #botaoAdicionarOpcaoCadastro{
-  height: 30px;
+  padding: 5px;
 }
 
 /*7 - Administradores Consultar*/
