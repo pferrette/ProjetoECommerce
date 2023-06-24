@@ -3,6 +3,8 @@
 
 // Write your JavaScript code.
 
+/* 1 - Funções para descer e subir as listas no menu lateral */
+
 function esconderflexInnerListProdutos(){
     let elementoLista = document.getElementById("flexInnerListProdutos");
     if (elementoLista.style.display == "none"){
@@ -42,16 +44,22 @@ function esconderflexInnerListRelatorios(){
     }
 }
 
+/* 2 - Função para esconder e exibir os elementos do formulário de cadastro de produto de acordo com a categoria selecionada */
+
 function atualizarCampos(){
 
     if(document.getElementById("opcoesCategoriaCadastro").value == "vazio"){
+
         document.getElementById("formProdutosCadastrar").style.visibility = "hidden";
         document.getElementById("formProdutosCadastrar").style.height = "0";
         document.getElementById("botaoCancelarCadastroProduto").style.display = "none";
+
     }else{
+
         document.getElementById("formProdutosCadastrar").style.visibility = "visible";
         document.getElementById("formProdutosCadastrar").style.height = "fit-content";
         document.getElementById("botaoCancelarCadastroProduto").style.display = "block";
+        
     }
 
     if(document.getElementById("opcoesCategoriaCadastro").value == "vestuario"){
@@ -83,7 +91,57 @@ function atualizarCampos(){
 
     }
 
+    atualizarSubCategorias();
+
 }
+
+/* 3 - Função para atualizar as subcategorias de acordo com a categoria selecionada */
+
+function atualizarSubCategorias(){
+
+    while (document.getElementById("opcoesSubcategoriaCadastro").hasChildNodes()) {
+        document.getElementById("opcoesSubcategoriaCadastro").removeChild(document.getElementById("opcoesSubcategoriaCadastro").firstChild);
+      }
+
+    if(document.getElementById("opcoesCategoriaCadastro").value == "vestuario"){
+
+        let elementoSubCategoria = document.createElement("option");
+        elementoSubCategoria.setAttribute("value", "camiseta");
+        elementoSubCategoria.text = "Camiseta";
+
+        let elementoSubCategoria2 = document.createElement("option");
+        elementoSubCategoria2.setAttribute("value", "calca");
+        elementoSubCategoria2.text = "Calça";
+
+        document.getElementById("opcoesSubcategoriaCadastro").appendChild(elementoSubCategoria);
+        document.getElementById("opcoesSubcategoriaCadastro").appendChild(elementoSubCategoria2);
+    }
+    if(document.getElementById("opcoesCategoriaCadastro").value == "consumivel"){
+
+        let elementoSubCategoria = document.createElement("option");
+        elementoSubCategoria.setAttribute("value", "comida");
+        elementoSubCategoria.text = "Comida";
+
+        let elementoSubCategoria2 = document.createElement("option");
+        elementoSubCategoria2.setAttribute("value", "bebida");
+        elementoSubCategoria2.text = "Bebida";
+
+        document.getElementById("opcoesSubcategoriaCadastro").appendChild(elementoSubCategoria);
+        document.getElementById("opcoesSubcategoriaCadastro").appendChild(elementoSubCategoria2);
+    }
+    
+    if(document.getElementById("opcoesCategoriaCadastro").value == "outros"){
+
+        let elementoSubCategoria = document.createElement("option");
+        elementoSubCategoria.setAttribute("value", "vazio");
+        elementoSubCategoria.text = "-";
+
+        document.getElementById("opcoesSubcategoriaCadastro").appendChild(elementoSubCategoria);
+    }
+
+}
+
+/* 4 - Função para adicionar opções de produto (tamanho, cor etc.) */
 
 let contagemOpcoesProdutoCadastrar = 0;
 
@@ -126,9 +184,19 @@ function adicionarOpcaoProduto(){
 
 }
 
+/*
+
+4 - Função que cria o campo (oculto) de resultado das opções de produto e o preenche.
+
+O valor de cada opcão é adicionado a uma string. Tudo fica separado por "."s.
+
+*/
+
 let contagemSalvarOpcoesCampoResultado = 0;
 
 function salvarOpcoesCadastrar(){
+
+    /* Parte que cria o campo de resultado. */
 
     if(contagemSalvarOpcoesCampoResultado == 0){
 
@@ -149,6 +217,8 @@ function salvarOpcoesCadastrar(){
         contagemSalvarOpcoesCampoResultado++;
 
     }
+
+    /* Parte que adiciona os valores à string. */
 
     document.getElementById("resultadoOpcoesProdutoCadastrar").value = ".";
 
