@@ -47,6 +47,7 @@ select{
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari e Chrome */
   appearance:none;
+  text-align: center;
 }
 
 textarea {
@@ -283,6 +284,7 @@ label{
 }
 
 #botaoSair{
+  display: none;
   width: 200px;
   height: 40px;
   background-color: red;
@@ -310,10 +312,12 @@ label{
 }
 
 #formProdutosCadastrar{
+  visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 0;
   max-width: 100%;
   border-top: 1px solid #e5e5e5;;
   border-bottom: 1px solid #e5e5e5;;
@@ -330,6 +334,21 @@ label{
 #botaoAdicionarOpcaoCadastro{
   padding: 5px;
   margin-bottom: 5px;
+}
+
+#botaoCancelarCadastroProduto{
+  display: none;
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  border-width: 0px;
+  margin: 10px;
+}
+
+#botaoCancelarCadastroProduto:hover{
+  opacity: 70%;
 }
 
 /*7 - Administradores Consultar*/

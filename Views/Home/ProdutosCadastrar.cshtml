@@ -13,9 +13,11 @@
         <label id="labelCategoria" for="opcoesCategoriaCadastro">Categoria:</label>
 
         <div id="containerCategoriaCadastrar" class="d-flex .flex-row flex-justify-center flex-items-center">
-            <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" form="formProdutosCadastrar" required>
-                <option value="vestuario" onclick="atualizarCamposVestuario">Vestuário</option>
-                <option value="consumivel" onclick="atualizarCamposConsumivel">Consumível</option>
+            <select class="inputDiscreto" id="opcoesCategoriaCadastro" name="opcoesCategoriaCadastro" onchange="atualizarCampos()" form="formProdutosCadastrar">
+                <option value="vazio">-</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="consumivel">Consumível</option>
+                <option value="outros">Outros</option>
             </select>
             <button type="button" class="botaoPretoPequeno">+</button>
         </div>
@@ -49,7 +51,7 @@
                 </tr>
             </table>
 
-            <div id="containerOpcoesCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
+            <div id="containerOpcoesCadastrar" class="d.flex flex-column flex-justify-center flex-items-center">
                 <button type="button" id="botaoAdicionarOpcaoCadastro" class="botaoPreto" onclick="adicionarOpcaoProduto()">Adicionar opção (tamanho, cor etc.)</button>
             </div>
 
@@ -113,7 +115,7 @@
 
         </form>
 
-        <button id="botaoSair">Cancelar</button>
+        <button id="botaoCancelarCadastroProduto">Cancelar</button>
 
     </div>
 

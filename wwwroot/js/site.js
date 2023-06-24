@@ -42,11 +42,46 @@ function esconderflexInnerListRelatorios(){
     }
 }
 
-function atualizarCamposVestuario(){
+function atualizarCampos(){
 
-}
+    if(document.getElementById("opcoesCategoriaCadastro").value == "vazio"){
+        document.getElementById("formProdutosCadastrar").style.visibility = "hidden";
+        document.getElementById("formProdutosCadastrar").style.height = "0";
+        document.getElementById("botaoCancelarCadastroProduto").style.display = "none";
+    }else{
+        document.getElementById("formProdutosCadastrar").style.visibility = "visible";
+        document.getElementById("formProdutosCadastrar").style.height = "fit-content";
+        document.getElementById("botaoCancelarCadastroProduto").style.display = "block";
+    }
 
-function atualizarCamposConsumivel(){
+    if(document.getElementById("opcoesCategoriaCadastro").value == "vestuario"){
+
+        document.getElementById("containerOpcoesCadastrar").style.display = "flex";
+        document.getElementById("containerOpcoesCadastrar").setAttribute("class", "d-flex flex-column flex-justify-center flex-items-center");
+       
+        document.getElementById("tableCadastrarValidade").style.display = "none";
+       
+    }
+
+    if(document.getElementById("opcoesCategoriaCadastro").value == "consumivel"){
+
+        document.getElementById("tableCadastrarValidade").style.display = "table";
+
+        document.getElementById("containerOpcoesCadastrar").removeAttribute("class");
+        document.getElementById("containerOpcoesCadastrar").style.display = "none";
+
+    }
+
+    if(document.getElementById("opcoesCategoriaCadastro").value == "outros"){
+
+        document.getElementById("containerOpcoesCadastrar").style.display = "flex";
+        document.getElementById("containerOpcoesCadastrar").setAttribute("class", "d-flex flex-column flex-justify-center flex-items-center");
+
+        document.getElementById("containerOpcoesCadastrar").style.display = "flex";
+    
+        document.getElementById("tableCadastrarValidade").style.display = "table";
+
+    }
 
 }
 
