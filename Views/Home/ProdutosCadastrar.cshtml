@@ -20,7 +20,7 @@
             <button type="button" class="botaoPretoPequeno">+</button>
         </div>
             
-        <form id="formProdutosCadastrar" action="atualizarCadastro" method="post">
+        <form id="formProdutosCadastrar" action="atualizarCadastro" method="get">
 
             <table>
                 <tr>
@@ -50,7 +50,7 @@
             </table>
 
             <div id="containerOpcoesCadastrar" class="d-flex flex-column flex-justify-center flex-items-center">
-                <button type="button" id="botaoAdicionarOpcaoCadastro" class="botaoPreto">Adicionar opção (tamanho, cor etc.)</button>
+                <button type="button" id="botaoAdicionarOpcaoCadastro" class="botaoPreto" onclick="adicionarOpcaoProduto()">Adicionar opção (tamanho, cor etc.)</button>
             </div>
 
             <table id="tableCadastrarFornecedor">
