@@ -12,8 +12,8 @@ namespace ProjetoEcommerce.Context
 
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<ItemVenda> ItemVendas { get; set; }
-        public DbSet<Pedido> Vendas { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
 
 
     }
